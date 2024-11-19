@@ -1,20 +1,22 @@
-# Python Kodunu Uygulamaya (.exe) Çevirme
+# Converting Python Code to a Standalone Application (.exe)
 
-Bu rehber, bir Python projesini çalıştırılabilir bir Windows uygulamasına (.exe) dönüştürmek için gerekli adımları açıklamaktadır. Aşağıdaki yönergeleri izleyerek süreci kolayca tamamlayabilirsiniz.
+This guide explains how to convert a Python project into a standalone Windows executable (.exe). Follow the steps below to complete the process easily.
 
-## Gereksinimler
-1. **Python** yüklü olmalı.
-2. **PyInstaller** ve **pyrcc5** kütüphaneleri kurulu olmalı.
-   - Eğer kurulu değilse, aşağıdaki komutları çalıştırabilirsiniz:
+## Requirements
+1. **Python** must be installed on your system.
+2. **PyInstaller** and **pyrcc5** libraries should be installed.
+   - If not already installed, run the following commands:
      ```bash
      pip install pyinstaller
      pip install PyQt5
      ```
 
-## Adımlar
+---
 
-### 1. `.qrc` Dosyasını `.py` Dosyasına Dönüştürme
-Eğer projenizde bir `.qrc` dosyası (örneğin kaynak dosyalarınızı içeren bir Qt Resource dosyası) kullanıyorsanız, bunu `.py` dosyasına dönüştürmek için aşağıdaki komutu kullanın:
+## Steps
+
+### 1. Convert `.qrc` File to `.py` File
+If your project includes a `.qrc` file (e.g., a Qt Resource file for managing assets), you need to convert it to a `.py` file using the following command:
 
 ```bash
-pyrcc5 dosya_adi.qrc -o dosya_adi.py
+pyrcc5 file_name.qrc -o file_name.py

@@ -20,3 +20,6 @@ If your project includes a `.qrc` file (e.g., a Qt Resource file for managing as
 
 ```bash
 pyrcc5 file_name.qrc -o file_name.py
+
+file_name.qrc: Name of the .qrc file to be converted.
+file_name.py: Name of the output .py file.

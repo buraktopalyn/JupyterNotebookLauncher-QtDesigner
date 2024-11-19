@@ -1,8 +1,20 @@
-### Python Kodunu Uygulamaya (.exe) çevirmek için terminalde aşağıdaki kodları dosya isimlerini değiştirerek sırayla çalıştırın
-  
- ### 1. adım: .qrc dosyasını .py dosyasına çevirme:
+# Python Kodunu Uygulamaya (.exe) Çevirme
+
+Bu rehber, bir Python projesini çalıştırılabilir bir Windows uygulamasına (.exe) dönüştürmek için gerekli adımları açıklamaktadır. Aşağıdaki yönergeleri izleyerek süreci kolayca tamamlayabilirsiniz.
+
+## Gereksinimler
+1. **Python** yüklü olmalı.
+2. **PyInstaller** ve **pyrcc5** kütüphaneleri kurulu olmalı.
+   - Eğer kurulu değilse, aşağıdaki komutları çalıştırabilirsiniz:
+     ```bash
+     pip install pyinstaller
+     pip install PyQt5
+     ```
+
+## Adımlar
+
+### 1. `.qrc` Dosyasını `.py` Dosyasına Dönüştürme
+Eğer projenizde bir `.qrc` dosyası (örneğin kaynak dosyalarınızı içeren bir Qt Resource dosyası) kullanıyorsanız, bunu `.py` dosyasına dönüştürmek için aşağıdaki komutu kullanın:
+
+```bash
 pyrcc5 dosya_adi.qrc -o dosya_adi.py
-
-### 2. adım: python yazılımını uygulamaya çevirme:
-python -m PyInstaller --onefile --icon=iconn.ico --noconsole main.py
-
